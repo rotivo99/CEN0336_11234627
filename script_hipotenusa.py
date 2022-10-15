@@ -2,7 +2,7 @@
 
 import sys
 
-#Criando variáveis para armazenar os valores inseridos pelo usuário. Está sem o int() porque não dá para usar o isdigit() com inteiros.
+#Criando variáveis para armazenar os valores inseridos pelo usuário. Está sem o int porque não dá para usar o isdigit() com inteiros.
 value_1 = sys.argv[1]
 value_2 = sys.argv[2]
 
