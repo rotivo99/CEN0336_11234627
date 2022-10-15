@@ -20,7 +20,7 @@ else: #Se falso...
 if n1.isdigit() and n2.isdigit() and n3.isdigit() and n4.isdigit():
     print('Os números inseridos são válidos. Prosseguindo...')
 else:
-    print('Os dados inseridos não são números ou, se são, não são inteiros. Insira valores válidos.')
+    print('Os dados inseridos não são números ou, se são, não são inteiros e/ou positivos. Insira valores válidos.')
     sys.exit()
 
 #Medindo o tamanho da sequência atribuída à dna. Será utilizada no próximo bloco.
@@ -32,15 +32,15 @@ n2_int = int(sys.argv[3]) #Como o valor final não é incluído, ele já vem cer
 n3_int = int(sys.argv[4]) - 1
 n4_int = int(sys.argv[5])
 
-if n1_int and n2_int and n3_int and n4_int > 0: #Todos valores inseridos têm que ser maiores que 0...
-    if n1_int < n2_int and n3_int < n4_int: #...o valor inicial do éxon tem que ser menor que seu valor final...
-        if n1_int and n2_int and n3_int and n4_int < length_dna: #...e todos os valores inseridos têm que ser menores que o tamanho total da sequência.
+if n1_int and n2_int and n3_int and n4_int > 0: #Todos os valores inseridos têm que ser maiores que 0.
+    if n1_int < n2_int and n2_int < n3_int and n3_int < n4_int: #O valor inicial do éxon tem que ser menor que seu valor final. Além disso, como ATG está no primeiro éxon, ele vem antes, então os valores do primeiro éxon têm que ser menores que o do segundo.
+        if n1_int and n2_int and n3_int and n4_int <= length_dna: #E todos os valores inseridos têm que ser menores que o tamanho total da sequência. Exceto o n4, que pode ser igual.
             print('Os números inseridos estão corretos e dentro do intervalo da sequência. Prosseguindo...')
         else:
-            print('Algum dos números inseridos é igual ou maior do que o número de caracteres da sequência. Insira valores válidos.')
+            print('Algum dos números inseridos é maior do que o número de caracteres da sequência. Insira valores válidos.')
             sys.exit()
     else:
-        print('O valor inicial de algum ou de ambos os éxons é maior do que o seu valor final. Insira valores válidos.')
+        print('Os valores devem estar em ordem crescente. Insira valores válidos.')
         sys.exit()
 else:
     print('Algum dos números inseridos é igual ou menor do que 0. Insira valores válidos.')
