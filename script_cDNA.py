@@ -34,7 +34,7 @@ n4_int = int(sys.argv[5])
 
 if n1_int and n2_int and n3_int and n4_int > 0: #Todos valores inseridos têm que ser maiores que 0...
     if n1_int < n2_int and n3_int < n4_int: #...o valor inicial do éxon tem que ser menor que seu valor final...
-        if n1_int and n2_int and n3_int and n4_int < length_dna: #... e todos os valores inseridos têm que ser menores que o tamanho total da sequência.
+        if n1_int and n2_int and n3_int and n4_int < length_dna: #...e todos os valores inseridos têm que ser menores que o tamanho total da sequência.
             print('Os números inseridos estão corretos e dentro do intervalo da sequência. Prosseguindo...')
         else:
             print('Algum dos números inseridos é igual ou maior do que o número de caracteres da sequência. Insira valores válidos.')
