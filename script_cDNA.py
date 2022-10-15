@@ -3,7 +3,7 @@
 import sys
 
 #Criando variáveis para armazenar os valores inseridos pelo usuário. Está sem o int() porque não dá para usar o isalpha() nem o isdigit() com inteiros.
-dna = sys.argv[1].upper() #O .upper() para que não haja problemas em lidar com entradas em que as letras estão minúsculas, porque nos métodos de busca que serão utilizados mais tarde, as strings estão em maiúsculo.
+dna = sys.argv[1].upper() #O upper() para que não haja problemas em lidar com entradas em que as letras estão minúsculas, porque nos métodos de busca que serão utilizados mais tarde, as strings estão em maiúsculo.
 n1 = sys.argv[2]
 n2 = sys.argv[3]
 n3 = sys.argv[4]
